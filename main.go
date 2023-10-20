@@ -2,12 +2,12 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
-    "github.com/joho/godotenv"
-    "github.com/jakeNorman007/api_go/initializers"
+    "github.com/JakeNorman007/api_go/initializers"
 )
 
 func init(){
     initializers.LoadEnvVariables()
+    initializers.ConnectToDB()
 }
 
 func main(){
@@ -18,5 +18,5 @@ func main(){
             "message": "pong",
         })
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run()
 }
