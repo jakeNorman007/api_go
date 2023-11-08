@@ -49,7 +49,7 @@ func PostShow(c *gin.Context){
 
     // get all of the posts
     var post models.Post
-    initializers.DB.First(&post, id )
+    initializers.DB.First(&post, id)
 
     // respond from the request with a single post, based of the id
     c.JSON(200, gin.H{
